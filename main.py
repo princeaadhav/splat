@@ -1,6 +1,6 @@
 def splat():
     score = 0
-    while input.logo_is_pressed() == False:
+    while input.button_is_pressed(Button.A) == False:
         chance = randint(1, 5)
         if chance >= 1 and chance <= 2:
             basic.show_icon(IconNames.BUTTERFLY)
@@ -20,3 +20,6 @@ def splat():
                 continue
     basic.show_number(score)
 splat()
+while True:
+    if input.button_is_pressed(Button.B):
+        splat()

@@ -1,7 +1,7 @@
 function splat() {
     let chance: number;
     let score = 0
-    while (input.logoIsPressed() == false) {
+    while (input.buttonIsPressed(Button.A) == false) {
         chance = randint(1, 5)
         if (chance >= 1 && chance <= 2) {
             basic.showIcon(IconNames.Butterfly)
@@ -30,3 +30,9 @@ function splat() {
 }
 
 splat()
+while (true) {
+    if (input.buttonIsPressed(Button.B)) {
+        splat()
+    }
+    
+}
